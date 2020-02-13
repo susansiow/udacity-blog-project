@@ -1,0 +1,447 @@
+@import url(home.css);
+@import url(blog.css);
+@import url(contact.css);
+@import url(https://fonts.googleapis.com/css?family=Quicksand:400,500&display=swap);
+
+
+/* HTML */
+
+html {
+    scroll-behavior: smooth;
+}
+
+
+/* Body */
+
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #fff;
+    font-family: "Quicksand", sans-serif;
+    color: #444;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-weight: 400;
+}
+
+h1 {
+    font-size: 3em;
+}
+
+h2 {
+    font-size: 2.75em;
+}
+
+h3 {
+    font-size: 2.5em;
+}
+
+h4 {
+    font-size: 2.25em;
+}
+
+h5 {
+    font-size: 2em;
+}
+
+h6 {
+    font-size: 1.75em;
+}
+
+p {
+    font-size: 1.25em;
+}
+
+a {
+    color: #00ffff;
+    transition: 0.3;
+}
+
+a:hover {
+    opacity: 0.8;
+}
+
+.no-underline-link a {
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+strong {
+    font-weight: 400;
+    font-style: italic;
+}
+
+input,
+textarea,
+button {
+    font-family: "Quicksand", sans-serif;
+}
+
+input {
+    box-sizing: border-box;
+}
+
+figure {
+    margin: 5% 0;
+    background-color: #fafafa;
+}
+
+figure img {
+    width: 100%;
+}
+
+figcaption {
+    text-align: right;
+    font-style: italic;
+    background-color: #fafafa;
+    padding: 1% 3% 2%;
+}
+
+
+/* Header */
+
+header {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #fff;
+    padding: 1%;
+}
+
+.logo {
+    order: 1;
+    cursor: pointer;
+}
+
+.logo img {
+    max-width: 100px;
+}
+
+nav {
+    order: 2;
+}
+
+nav ul {
+    list-style: none;
+    padding-inline-start: 0;
+}
+
+nav ul li {
+    display: inline-block;
+    padding: 10px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+nav ul li a {
+    color: #444;
+    text-decoration: none;
+}
+
+nav ul li a:hover {
+    color: #0ff;
+    opacity: 1;
+}
+
+.tab-current {
+    color: #aaa;
+}
+
+.btn-header {
+    order: 3;
+}
+
+
+/* Text */
+
+.text-light {
+    color: #fff;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.text-right {
+    text-align: right;
+}
+
+.text-italic {
+    font-style: italic;
+}
+
+
+/* Divider */
+
+.divider-center:after {
+    content: "";
+    display: block;
+    width: 50px;
+    height: 3px;
+    margin: 0 auto;
+}
+
+.divider-dark:after {
+    background-color: #0ff;
+}
+
+
+/* Blockquote */
+
+blockquote {
+    font-style: italic;
+    line-height: 1.75em;
+    background-color: #fafafa;
+    border-radius: 10px;
+    padding: 5%;  
+    margin: 5% 0;
+}
+
+blockquote:before {
+    content: "\"";
+    display: inline-block;
+    font-size: 1.75em;
+    color: #0ff;
+    margin-right: 10px;
+}
+
+
+/* Form */
+
+.form-basic input,
+.form-basic textarea {
+    letter-spacing: 2px;
+    border-radius: 20px;
+    padding: 12px 22px;
+}
+
+.form-basic input[type="text"], 
+.form-basic input[type="email"],
+.form-basic textarea {  
+    border: 2px solid #fff;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.form-basic input[type="text"]:hover,
+.form-basic input[type="email"]:hover,
+.form-basic textarea:hover {  
+    border: 2px solid #0ff;
+}
+
+.form-basic textarea {
+    font-size: 0.833em;
+}
+
+.form-basic input[type="submit"] {
+    border: 2px solid #0ff;
+    background-color: #fff;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.form-basic input[type="submit"]:hover {
+    background-color: #0ff;
+}
+
+
+/* Button */
+
+button {
+    font-size: 14px;
+    padding: 12px 22px;
+    border-radius: 30px;
+    transition: 0.3s;
+    cursor: pointer;
+}
+
+button a {
+    letter-spacing: 2px;
+    text-decoration: none;
+}
+
+.btn-header {
+    border: 2px solid #0ff;
+    background-color: #fff;
+}
+
+.btn-header:hover {
+    background-color: #0ff;
+}
+
+.btn-header a {
+    color: #444;
+}
+
+
+/* Subscription */
+
+.subscription {
+    background: linear-gradient(233deg, #0ff, #aaa, #0ff, #aaa);
+    background-size: 800% 800%;
+
+    -webkit-animation: BgAnimate1 30s ease infinite;
+    -moz-animation: BgAnimate1 30s ease infinite;
+    animation: BgAnimate1 30s ease infinite;
+
+    padding: 8% 5%;
+}
+
+@-webkit-keyframes BgAnimate1 {
+    0%{background-position:0% 50%}
+    50%{background-position:100% 50%}
+    100%{background-position:0% 50%}
+}
+@-moz-keyframes BgAnimate1 {
+    0%{background-position:0% 50%}
+    50%{background-position:100% 50%}
+    100%{background-position:0% 50%}
+}
+@keyframes BgAnimate1 {
+    0%{background-position:0% 50%}
+    50%{background-position:100% 50%}
+    100%{background-position:0% 50%}
+}
+
+.subscription form {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 650px;
+    margin: 0 auto;
+}
+
+.subscription-note {
+    font-size: 1em;
+    font-style: italic;
+    margin-top: 30px;
+}
+
+
+/* Footer */
+
+footer {
+    overflow: auto;
+}
+
+.footer-copyright {
+    font-size: 0.9em;
+    text-align: center;
+}
+
+.footer-copyright a {
+    color: #0ff;
+    font-style: italic;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+
+/* Media Queries */
+
+@media only screen and (max-width: 320px) {
+
+    /* Body */
+
+    h1 {
+        font-size: 2.25em;
+    }
+    
+    h2 {
+        font-size: 2em;
+    }
+    
+    h3 {
+        font-size: 1.75em;
+    }
+    
+    h4 {
+        font-size: 1.5em;
+    }
+    
+    h5 {
+        font-size: 1.25em;
+    }
+    
+    h6 {
+        font-size: 1em;
+    }
+    
+    p {
+        font-size: 1em;
+    }
+
+
+    /* Header */
+
+    header {
+        padding: 10% 1%;
+    }
+
+    nav ul li {
+        font-size: 14px;
+    }
+
+}
+
+
+@media only screen and (min-width: 321px) and (max-width: 767px) {
+
+    /* Header */
+
+    header {
+        padding: 3% 1%;
+    }
+
+}
+
+
+@media only screen and (max-width: 767px) {
+
+    /* Header */
+
+    header {
+        flex-direction: column;
+    }
+
+
+    /* Form */
+
+    .form-basic input {
+        width: 70%;
+    }
+
+    .form-basic input[type="text"], 
+    .form-basic input[type="email"] {
+        margin-bottom: 20px;
+    }
+
+
+    /* Subscription */
+
+    .subscription form {
+        flex-direction: column;
+    }
+
+}
+
+
+@media only screen and (min-width: 768px) {
+
+    /* Subscription */
+
+    .subscription .form-basic input[type="text"], 
+    .subscription .form-basic input[type="email"] {
+        width: 100%;
+        margin-right: 2%;
+    }
+
+}
